@@ -28,10 +28,11 @@ if '--user' in sys.argv:
 
 setup(
     data_files=[
-        (str(share / 'man' / 'man1'), [
-            'share/man/man1/pass-import.1',
-            'share/man/man1/pimport.1',
-        ]),
+        # we have not generated them with pandoc
+        # (str(share / 'man' / 'man1'), [
+        #     'share/man/man1/pass-import.1',
+        #     'share/man/man1/pimport.1',
+        # ]),
         (str(share / 'bash-completion' / 'completions'), [
             'share/bash-completion/completions/pass-import',
             'share/bash-completion/completions/pimport',
