@@ -183,6 +183,6 @@ class PasswordExporter(PasswordManager):
         audit = Audit(self.data)
         if hibp:
             audit.password()
-        audit.zxcvbn()
+        audit.zxcvbn(max_length=1000)
         audit.duplicates()
         return audit.report
