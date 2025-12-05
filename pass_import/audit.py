@@ -92,7 +92,7 @@ class Audit():
             user_input = list(entry.values())
             if password in user_input:
                 user_input.remove(password)
-            results = zxcvbn(password, user_inputs=user_input)
+            results = zxcvbn(password, user_inputs=user_input, max_length=1000)
             if results['score'] <= 2:
                 self.weak.append((password, results))
 
